@@ -9,9 +9,9 @@ function App() {
   const [filterValue, setFilterValue] = useState(1); // Default filter value
 
   useEffect(() => {
-    // Listen for 'volumeData' events from the backend
+   
     socket.on('volumeData', (data) => {
-    //  console.log('Received volume data:', data);
+      console.log('Received volume data:', data);
 
       // Organize data by symbol and timeframe
       setVolumeData((prevData) => {
